@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Your Cart</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Your Cart</h1>
+
+<a href="index.html">
+<button>← Continue Shopping</button>
+</a>
+
+</header>
+
+<div id="cartItems"></div>
+
+<h2>Total: K<span id="cartTotal">0</span></h2>
+
+<br>
+
+<label>Province</label>
+<br>
+<input type="text" id="province" placeholder="Enter your province">
+
+<br><br>
+
+<button onclick="checkout()">Generate Receipt</button>
+<button onclick="clearCart()">Clear Cart</button>
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+let cartItems = document.getElementById("cartItems")
+
+let total = 0
+
+cart.forEach(item => {
+
+cartItems.innerHTML += `
+<p>${item.name} x${item.qty} — K${item.price * item.qty}</p>
+`
+
+total += item.price * item.qty
+
+})
+
+document.getElementById("cartTotal").innerText = total
+
+function checkout(){
+
+let province = document.getElementById("province").value.trim()
+
+if(province === ""){
+
+alert("Please enter your province")
+
+return
+
+}
+
+
+
+let shipping = total <= 300 ? 80 : 150
+
+let transport = province.toLowerCase() === "lusaka" ? "Yango" : "Platinum"
+
+let finalTotal = total + shipping
+
+localStorage.setItem("receiptItems", JSON.stringify(cart))
+localStorage.setItem("receiptProvince", province)
+localStorage.setItem("receiptTransport", transport)
+localStorage.setItem("receiptShipping", shipping)
+localStorage.setItem("receiptTotal", finalTotal)
+
+window.location.href = "receipt.html"
+
+}
+
+function clearCart() {
+    if(confirm("Are you sure you want to clear the cart?")) {
+        cart = []
+        localStorage.removeItem("cart")
+        cartItems.innerHTML = ""
+        document.getElementById("cartTotal").innerText = 0
+        alert("Cart has been cleared!")
+    }
+}
+
+</script>
+
+</body>
+
+</html>

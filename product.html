@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 id="productName"></h2>
+<p id="productPrice"></p>
+
+<label>Quantity</label>
+<br>
+<input type="number" id="quantity" value="1" min="1">
+
+<br><br>
+
+<label>Province</label>
+<br>
+<input type="text" id="province" placeholder="Enter your province">
+
+<br><br>
+
+<button onclick="createReceipt()">Generate Receipt</button>
+
+<script src="script.js"></script>
+
+<script>
+const id = localStorage.getItem("productID")
+const product = products.find(p => p.id == id)
+
+document.getElementById("productName").innerText = product.name
+document.getElementById("productPrice").innerText = "Price: K" + product.price
+
+function createReceipt(){
+    let qty = document.getElementById("quantity").value
+    let province = document.getElementById("province").value.trim()
+    
+    if(province === ""){
+        alert("Please enter your province")
+        return
+    }
+
+    let total = product.price * qty
+    let shipping = total <= 300 ? 80 : 150
+    let transport = province.toLowerCase() === "lusaka" ? "Yango" : "Platinum"
+    let finalTotal = total + shipping
+
+    // Save to localStorage for receipt page
+    localStorage.setItem("receiptProduct", product.name)
+    localStorage.setItem("receiptPrice", product.price)
+    localStorage.setItem("receiptQty", qty)
+    localStorage.setItem("receiptProvince", province)
+    localStorage.setItem("receiptTransport", transport)
+    localStorage.setItem("receiptShipping", shipping)
+    localStorage.setItem("receiptTotal", finalTotal)
+
+    window.location.href="receipt.html"
+}
+</script>
+
+</body>
+</html>

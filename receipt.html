@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Receipt</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="receipt">
+
+<h2>TechTrendsZM Receipt</h2>
+
+<div id="items"></div>
+
+<p><b>Province:</b> <span id="rProvince"></span></p>
+
+<p><b>Transport:</b> <span id="rTransport"></span></p>
+
+<p><b>Shipping Fee:</b> K<span id="rShipping"></span></p>
+
+<p class="total"><b>Total:</b> K<span id="rTotal"></span></p>
+
+<p class="note">
+Screenshot this receipt and send it to our WhatsApp to confirm your order.
+</p>
+
+<button onclick="sendWhatsApp()">Send Order to WhatsApp</button>
+
+</div>
+
+<script>
+
+let items = JSON.parse(localStorage.getItem("receiptItems")) || []
+let itemsDiv = document.getElementById("items")
+
+items.forEach(item => {
+
+itemsDiv.innerHTML += `
+<p>${item.name} x${item.qty} — K${item.price * item.qty}</p>
+`
+
+})
+
+document.getElementById("rProvince").innerText =
+localStorage.getItem("receiptProvince")
+
+document.getElementById("rTransport").innerText =
+localStorage.getItem("receiptTransport")
+
+document.getElementById("rShipping").innerText =
+localStorage.getItem("receiptShipping")
+
+document.getElementById("rTotal").innerText =
+localStorage.getItem("receiptTotal")
+
+
+function sendWhatsApp(){
+
+let items = JSON.parse(localStorage.getItem("receiptItems")) || []
+
+let province = localStorage.getItem("receiptProvince")
+let transport = localStorage.getItem("receiptTransport")
+let shipping = localStorage.getItem("receiptShipping")
+let total = localStorage.getItem("receiptTotal")
+
+let orderList = ""
+
+items.forEach(item=>{
+orderList += `${item.name} x${item.qty} - K${item.price * item.qty}\n`
+})
+
+let phone = "260976221533"
+
+let message =
+`NEW ORDER - TechTrendsZM
+
+${orderList}
+
+Province: ${province}
+Transport: ${transport}
+Shipping: K${shipping}
+
+Total: K${total}
+
+Customer will send payment proof.`
+
+let url =
+`https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+
+window.open(url)
+
+}
+
+</script>
+
+</body>
+
+</html>
