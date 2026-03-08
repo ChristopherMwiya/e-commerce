@@ -5,7 +5,7 @@ const products = [
 id:1,
 name:"Mango airpods",
 price:150,
-image:"https://via.placeholder.com/200"
+image:"pictures/mango.jpg"
 }
 
 ]
@@ -59,5 +59,6 @@ cart.push({...product, qty:1})
 localStorage.setItem("cart", JSON.stringify(cart))
 
 alert("Product added to cart!")
+
 
 }
