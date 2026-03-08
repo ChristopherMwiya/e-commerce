@@ -5,7 +5,7 @@ const products = [
 id:1,
 name:"Mango airpods",
 price:150,
-image:"pictures/mango.jpg"
+image:"/pictures/mango.jpg"
 }
 
 ]
@@ -62,3 +62,4 @@ alert("Product added to cart!")
 
 
 }
+
