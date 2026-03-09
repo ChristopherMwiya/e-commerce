@@ -23,7 +23,7 @@ image:"/pictures/calusjv52.png"
 id:4,
 name:"Calus Airpods pro",
 price:400,
-image:"/pictures/calusairpodspro.png"
+image:"pictures/calusairpodspro.png"
 }
 ]
 
@@ -79,6 +79,7 @@ alert("Product added to cart!")
 
 
 }
+
 
 
 
