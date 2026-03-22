@@ -24,6 +24,12 @@ id:4,
 name:"Calus Airpods pro",
 price:400,
 image:"/pictures/calusairpodspro.png"
+},
+  {
+id:5,
+name:"Airpods cases",
+price:90,
+image:"/pictures/calusairpodspro.png"
 }
 ]
 
