@@ -5,31 +5,31 @@ const products = [
 id:1,
 name:"Mango airpods",
 price:150,
-image:"/pictures/mango.jpg"
+image:"pictures/mango.jpg"
 },
 {
 id:2,
 name:"p236 Tripod",
 price:650,
-image:"/pictures/p236.png"
+image:"pictures/p236.png"
 },
 {
 id:3,
 name:"Calus JV52",
 price:500,
-image:"/pictures/calusjv52.png"
+image:"pictures/calusjv52.png"
 },
 {
 id:4,
 name:"Calus Airpods pro",
 price:400,
-image:"/pictures/calusairpodspro.png"
+image:"pictures/calusairpodspro.png"
 },
   {
 id:5,
 name:"Airpods cases",
 price:90,
-image:"/pictures/calusairpodspro.png"
+image:"pictures/calusairpodspro.png"
 }
 ]
 
