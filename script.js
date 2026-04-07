@@ -30,6 +30,12 @@ id:5,
 name:"Airpods cases",
 price:90,
 image:"pictures/calusairpodspro.png"
+},
+   {
+id:6,
+name:"PIXEL WATCH",
+price:1800,
+image:"pictures/61zfx9OEwDL.jpg"
 }
 ]
 
