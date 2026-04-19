@@ -9,9 +9,9 @@ image:"pictures/photo_2026-04-03_11-47-26.jpg"
 },
 {
 id:1,
-name:"Mango airpods",
+name:"Smart Rope LE",
 price:150,
-image:"pictures/mango.jpg"
+image:"pictures/jumping.jpg"
 },
  
 {
@@ -29,14 +29,14 @@ image:"pictures/calusjv52.png"
 {
 id:4,
 name:"Calus Airpods pro",
-price:400,
+price:300,
 image:"pictures/calusairpodspro.png"
 },
   {
 id:5,
 name:"Airpods cases",
 price:90,
-image:"pictures/calusairpodspro.png"
+image:"pictures/cases.jpgg"
 },
    {
 id:6,
