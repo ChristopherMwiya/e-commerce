@@ -36,7 +36,7 @@ image:"pictures/calusairpodspro.png"
 id:5,
 name:"Airpods cases",
 price:90,
-image:"pictures/cases.jpgg"
+image:"pictures/cases.jpg"
 },
    {
 id:6,
