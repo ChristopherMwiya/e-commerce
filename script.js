@@ -4,10 +4,10 @@ const products = [
 {
 id:0,
 name:"EDITING",
-price:500,
+price:200,
+oldPrice:500,
 image:"pictures/photo_2026-04-03_11-47-26.jpg"
-},
-{
+},{
 id:1,
 name:"Smart Rope LE",
 price:150,
@@ -59,7 +59,10 @@ productList.innerHTML += `
 
 <img src="${product.image}">
 <h3>${product.name}</h3>
-<p>K${product.price}</p>
+<p>
+${product.oldPrice ? `<span style="text-decoration:line-through;color:gray;">K${product.oldPrice}</span> ` : ""}
+<span>K${product.price}</span>
+</p>
 
 <button onclick="addToCart(${product.id})">
 Add to Cart
