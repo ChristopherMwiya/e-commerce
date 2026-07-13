@@ -44,6 +44,12 @@ name:"PIXEL WATCH",
 price:1800,
 image:"pictures/61zfx9OEwDL.jpg"
 }
+ ,{
+id:7,
+name:"HP696",
+price:450,
+image:"pictures/Hppods.png"
+ }
 ]
 
 // DISPLAY PRODUCTS ON HOMEPAGE
