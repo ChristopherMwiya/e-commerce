@@ -4,7 +4,7 @@ const products = [
 {
 id:0,
 name:"EDITING",
-price:200,
+price:400,
 oldPrice:500,
 image:"pictures/photo_2026-04-03_11-47-26.jpg"
 },{
