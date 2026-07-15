@@ -49,6 +49,11 @@ id:7,
 name:"HP696",
 price:450,
 image:"pictures/Hppods.png"
+ },{
+id:8,
+name:"X3",
+price:320,
+image:"pictures/Control.png"
  }
 ]
 
