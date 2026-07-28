@@ -54,7 +54,13 @@ id:8,
 name:"X3",
 price:320,
 image:"pictures/Control.png"
- }
+ },
+  {
+id:9,
+name:"i17 pro max",
+price:4500,
+image:"pictures/I17.png"
+}
 ]
 
 // DISPLAY PRODUCTS ON HOMEPAGE
