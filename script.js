@@ -9,57 +9,9 @@ oldPrice:500,
 image:"pictures/photo_2026-04-03_11-47-26.jpg"
 },{
 id:1,
-name:"Smart Rope LE",
-price:150,
-image:"pictures/jumping.jpg"
-},
- 
-{
-id:2,
-name:"p236 Tripod",
-price:650,
-image:"pictures/p236.png"
-},
-{
-id:3,
-name:"Calus JV52",
-price:500,
-image:"pictures/calusjv52.png"
-},
-{
-id:4,
-name:"Calus Airpods pro",
-price:300,
-image:"pictures/calusairpodspro.png"
-},
-  {
-id:5,
-name:"Airpods cases",
-price:90,
-image:"pictures/cases.jpg"
-},
-   {
-id:6,
-name:"PIXEL WATCH",
-price:1800,
-image:"pictures/61zfx9OEwDL.jpg"
-}
- ,{
-id:7,
-name:"HP696",
-price:450,
-image:"pictures/Hppods.png"
- },{
-id:8,
-name:"X3",
-price:320,
-image:"pictures/Control.png"
- },
-  {
-id:9,
-name:"i17 pro max",
-price:4500,
-image:"pictures/I17.png"
+name:"Controller",
+price:350,
+image:"pictures/Controller.png"
 }
 ]
 
